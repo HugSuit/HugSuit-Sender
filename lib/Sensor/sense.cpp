@@ -1,6 +1,6 @@
 #include "sense.h"
 
-const int sensorPin = 3;
+const int sensorPin = 34;
 int value, adjustedValue;
 
 void setupSensor()
@@ -12,8 +12,8 @@ int loopSensor()
 {
     value = analogRead(sensorPin);
 
-    adjustedValue = map(value, 0, 1023, 0, 100);
-    // Serial.print("Sensor value =");
-    // Serial.println(adjustedValue);
+    adjustedValue = map(value, 0, 4096, 0, 100);
+    Serial.print("Sensor value =");
+    Serial.println(adjustedValue);
     return adjustedValue;
 }

@@ -9,7 +9,7 @@ void setup()
 {
   Serial.begin(115200);
 
-  // setupSensor();
+  setupSensor();
 
   initWiFi();
 
@@ -25,5 +25,5 @@ void setup()
 
 void loop()
 {
-  // actualValue = loopSensor();
+  actualValue = loopSensor();
 }
