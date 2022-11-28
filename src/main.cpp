@@ -11,7 +11,6 @@ void setup()
 
   // setupSensor();
 
-  // TODO: Wifi connection.
   initWiFi();
 
   setClientData();
