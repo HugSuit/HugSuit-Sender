@@ -1,9 +1,30 @@
 #include <Arduino.h>
+#include <wifiControl.h>
+#include <mqtt.h>
+#include <sense.h>
 
-void setup() {
-  // put your setup code here, to run once:
+int actualValue;
+
+void setup()
+{
+  Serial.begin(115200);
+
+  // setupSensor();
+
+  // TODO: Wifi connection.
+  initWiFi();
+
+  setClientData();
+  MQTTconnection();
+
+  subscribeTo("s1");
+
+  publishTo("Angle", "50");
+
+  delay(1000);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+  // actualValue = loopSensor();
 }
